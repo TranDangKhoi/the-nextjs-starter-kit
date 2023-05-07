@@ -16,6 +16,16 @@ export default function Home() {
         <header>
           <Link href="/">Home</Link>
           <Link href="/property">Property</Link>
+          <Link
+            href={{
+              pathname: "/property/[slug]",
+              query: {
+                slug: 1,
+              },
+            }}
+          >
+            Test
+          </Link>
           <Link href="/blog">Blog</Link>
         </header>
       </main>
