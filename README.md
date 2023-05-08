@@ -60,3 +60,9 @@ const AboutAllSegments = () => {
 ```
 
 Ta sẽ nhận được một kết quả query là một array chứa các phần tử là các segments nằm trên URL. Ví dụ một URL như sau: `http://localhost:3000/about/la-la-la/li-li-li`. Thì ta sẽ được kết quả query là `["la-la-la","li-li-li"]`
+
+```bash
+📦pages
+┣ 📂post
+┃┗ 📜[...slug].tsx // New line
+```
