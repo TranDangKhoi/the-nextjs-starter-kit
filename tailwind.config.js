@@ -17,6 +17,11 @@ module.exports = {
         grayfc: "#FCFCFC",
         gray80: "#808191",
         primary: "#11142D",
+        primaryText: "#11142D",
+        primary: "#475BE8",
+      },
+      spacing: {
+        c10: "10px",
       },
     },
   },

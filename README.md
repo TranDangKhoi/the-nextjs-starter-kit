@@ -66,3 +66,44 @@ Ta sẽ nhận được một kết quả query là một array chứa các ph�
 ┣ 📂post
 ┃┗ 📜[...slug].tsx // New line
 ```
+
+## next.config.js
+
+Đây là file config của NextJS, ta có thể thêm các config như sau:
+
+```tsx
+module.exports = {
+  reactStrictMode: true,
+  env: {
+    API_URL: "https://jsonplaceholder.typicode.com",
+  },
+};
+```
+
+Ngoài ra để approve domains để lấy đường dẫn ảnh từ các nguồn khác thì ta có thể config như sau:
+
+```tsx
+module.exports = {
+  reactStrictMode: true,
+  env: {
+    API_URL: "https://jsonplaceholder.typicode.com",
+  },
+  images: {
+    domains: ["jsonplaceholder.typicode.com"],
+  },
+};
+```
+
+## getStaticProps
+
+Đây là một function có thể được export từ một page, nó sẽ chạy trước khi component được render. Và nó sẽ trả về một object có dạng như sau:
+
+```tsx
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      posts: [],
+    },
+  };
+};
+```
